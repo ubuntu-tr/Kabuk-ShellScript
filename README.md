@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="https://s30.postimg.org/he2l6zgch/logo-ubuntu_cof-orange-hex.jpg" alt="Ubuntu-TR">
+  <img src="https://s30.postimg.org/he2l6zgch/logo-ubuntu_cof-orange-hex.jpg" img width=300 height=300 alt="Ubuntu-TR">
 </p>
 
 Ubuntu-TR Forum'u üyeleri tarafından yazılan kullanışlı/yararlı kabuk(shell) scriptlerini birarada bulabilmek için oluşturulmuş bir depodur.
 
-###Nasıl Katkı Yapabilirim?
+### Nasıl Katkı Yapabilirim?
 Yazmış olduğunuz kodu buraya `pull request` olarak gönderebilir ya da forum üzerinden yardım talebinde bulunabilirsiniz.
 
 Script içerisinde;
@@ -26,8 +26,9 @@ belirtilmelidir.
 ```
 Her script ayrı bir klasörde bulunacak şekilde düzenlenecektir. Klasör içerisinde kodlar ve `README.md` adı altında gerekli açıklamaların bulunduğu bir kılavuz ile birlikte paylaşılması gerekmektedir.
 
-##Kabuk-ShellScript
+## Kabuk-ShellScript
 | İsim | Özet |
+| --- | --- |
 | aaa | Kısa özeti burada |
 
 _* Liste güncellenecektir._
