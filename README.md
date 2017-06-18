@@ -29,6 +29,8 @@ Yazmış olduğunuz kodu buraya `pull request` olarak gönderebilir ya da forum 
 ```
 Her script ayrı bir klasörde bulunacak şekilde düzenlenecektir. Klasör içerisinde kodlar ve `README.md` adı altında gerekli açıklamaların bulunduğu bir kılavuz ile birlikte paylaşılması gerekmektedir.
 
+---
+
 ### Kabuk-ShellScript
 | İsim | Özet |
 | --- | --- |
