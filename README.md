@@ -7,7 +7,7 @@ Ubuntu-TR Forum'u üyeleri tarafından yazılan kullanışlı/yararlı kabuk(she
 ---
 
 ### Nasıl Katkı/Paylaşım Yapabilirim?
-Yazmış olduğunuz kodu buraya `pull request` olarak gönderebilir ya da forum üzerinden yardım talebinde bulunabilirsiniz.
+Yazmış olduğunuz kodu buraya `pull request` olarak gönderebilir ya da [forum](https://forum.ubuntu-tr.net/index.php?board=118.0) üzerinden yardım talebinde bulunabilirsiniz.
 
 **Script içerisinde;**
 * Kodların ne işe yaradığına dair kısa bir açıklama,
@@ -36,6 +36,6 @@ Her script ayrı bir klasörde bulunacak şekilde düzenlenecektir. Klasör içe
 ### Kabuk-ShellScript
 | İsim | Özet |
 | --- | --- |
-| aaa | Kısa özeti burada |
+| [aaa](https://github.com/ubuntu-tr/Kabuk-ShellScript/tree/master/kodlar/aaa) | Kısa özeti burada |
 
 _* Liste güncellenecektir._
