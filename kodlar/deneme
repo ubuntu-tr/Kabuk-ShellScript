@@ -1,0 +1,54 @@
+#!/bin/bash
+
+message[0]='İşlemci Testi'
+message[1]='Testi başlattığınızda, sorun olduğunu düşündüğünüz işlemleri yapın. Bu test 30 saniye sürecek'
+message[2]='Test başlatıldı'
+message[3]='CPU Kullanımı:'
+message[4]="İşlemciyi %30 'un üzerinde kullanan uygulamalar"
+message[5]='Dialog paketi bulunamadı. öncelikle "dialog" paketini kurun'
+if [[ `which dialog 2>/dev/null` == "" ]]; then
+echo ${message[5]}; exit
+fi
+counter=100
+rm /tmp/{cpuinfo,cpuwarning} 2>/dev/null; echo >/tmp/cpuinfo
+dialog --title "${message[0]}" \
+--yesno "\n${message[1]}" 7 60 2>&1
+case $? in
+   0)  while :; do
+cat <<EOF
+$counter
+($counter%)
+EOF
+(( counter-=3 ))
+ps -Ao pcpu,args|egrep -v '^ 0|%'|awk '{print $1,$2}'| tee -a /tmp/cpuinfo
+echo -e "\n" >>/tmp/cpuinfo
+[[ $counter -lt '4' ]] && break; sleep 1
+done | dialog --title "${message[2]}" --gauge "" 0 45;;
+   1) exit 0;;
+esac
+clear; tput bold
+tput setaf 208
+echo -e "\n${message[3]} \n"
+tput setaf 219
+cat /tmp/cpuinfo
+while read line; do
+if [[ $(echo $line|grep '^[0-9]'|awk '{print $1}'|cut -d. -f1) -ge 30 ]]; then
+echo $line >>/tmp/cpuwarning
+fi
+done <<<$(cat /tmp/cpuinfo)
+tput setaf 208
+if [[ -e /tmp/cpuwarning ]] && [[ -e /usr/share/sounds/gnome/default/alerts/Xylo.ogg ]]; then
+VLM=`amixer sget 'Master'|grep '[0-9]%'|cut -d[ -f2|cut -d% -f1|head -1`
+amixer sset 'Master' 90% &>/dev/null
+sleep 1
+canberra-gtk-play --file="/usr/share/sounds/gnome/default/alerts/Xylo.ogg" &
+echo -e "\n ${message[4]}\n "
+amixer sset 'Master' $VLM% &>/dev/null
+tput setaf 226
+cat /tmp/cpuwarning
+elif [[ -e /tmp/cpuwarning ]]; then
+echo -e "\n ${message[4]}\n "
+tput setaf 226
+cat /tmp/cpuwarning
+fi
+tput sgr0
