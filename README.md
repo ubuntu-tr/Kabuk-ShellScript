@@ -36,6 +36,6 @@ Her script ayrı bir klasörde bulunacak şekilde düzenlenecektir. Klasör içe
 ### Kabuk-ShellScript
 | İsim | Özet |
 | --- | --- |
-| [aaa](https://github.com/ubuntu-tr/Kabuk-ShellScript/tree/master/kodlar/aaa) | Kısa özeti burada |
+| [if-then-else](https://github.com/ubuntu-tr/Kabuk-ShellScript/tree/master/kodlar/ifthenelse) | Bash Programlamada if-then-else yapısının kullanım mantığını açıklamak için yazılmıştır. |
 
 _* Liste güncellenecektir._

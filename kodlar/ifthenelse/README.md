@@ -1,8 +1,8 @@
 # if-then-else
 
-```ifthenelse.sh``` isimli betik, Bash Programlamada if-then-else yapısının kullanım mantığını açıklamak için yazılmıştır. 
+```ifthenelse.sh``` isimli betik, Bash Programlamada if-then-else yapısının kullanım mantığını açıklamak için yazılmıştır.
 
->Gerçek bir yedekleme programı değildir.
+> **Not:** Gerçek bir yedekleme programı değildir.
 
 Kısaca kullanımı ve gerçekleştirilen işlemleri açıklayalım;
 
