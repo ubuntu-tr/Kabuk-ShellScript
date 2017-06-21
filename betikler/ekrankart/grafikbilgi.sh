@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #----------------------------------------------------
-# Özet: Bu betik, Eran kartı problemi olan Ubuntu kullanıcılarının donanım 
+# Özet: Bu betik, Ekran kartı problemi olan Ubuntu kullanıcılarının donanım 
 # bilgisini özetlemek için yazılmıştır. Bir problem yaşadığınızda, çözüme
 # yardımcı olunabilmesi için, bu betiğin çıktılarının paylaşılması
 # faydalı olacaktır.

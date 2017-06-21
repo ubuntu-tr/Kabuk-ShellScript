@@ -36,6 +36,7 @@ Her script ayrı bir klasörde bulunacak şekilde düzenlenecektir. Klasör içe
 ### Kabuk-ShellScript
 | İsim | Özet |
 | --- | --- |
-| [if-then-else](https://github.com/ubuntu-tr/Kabuk-ShellScript/tree/master/kodlar/ifthenelse) | Bash Programlamada if-then-else yapısının kullanım mantığını açıklamak için yazılmıştır. |
+| [grafikbilgi](https://github.com/ubuntu-tr/Kabuk-ShellScript/tree/master/betikler/ekrankart) | Ekran kartı problemi olan Ubuntu kullanıcılarının donanım bilgisini özetlemek için yazılmıştır. |
+| [if-then-else](https://github.com/ubuntu-tr/Kabuk-ShellScript/tree/master/betikler/ifthenelse) | Bash Programlamada if-then-else yapısının kullanım mantığını açıklamak için yazılmıştır. |
 
 _* Liste güncellenecektir._
