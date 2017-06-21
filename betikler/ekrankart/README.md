@@ -2,7 +2,7 @@
 
 Bu betik, Linux İşletim Sisteminizde mevcut durumdaki grafik kartı bilgilerini ve yüklü olan sürücüleri ekrana yazdırır. Grafik kartınız ile ilgili yardıma ihtiyacınız olduğunda, bu bilgileri toplu olarak paylaşmanız yardım edeceklerin soracakları sorulara cevap olacaktır. Zaman kazanmanız açısından kullanmanızı tavsiye ediyoruz.
 
-# Açıklamalar
+## Açıklamalar
 
 1. Betik, apt paket yöneticisi kullanan sistemler için yazılmıştır.
 2. ```grafikbilgi.sh``` dosyasını indirdikten sonra aşağıdaki komutla çalıştırılabilir hale getirin.
@@ -13,33 +13,35 @@ chmod +x grafikbilgi.sh
 
 3. Betik dosyasını artık  ```./grafikbilgi.sh``` komutu ile çalıştırabilirsiniz.
 
-# Betik Hangi İşlemleri Yapıyor?
+## Betik Hangi İşlemleri Yapıyor?
 
-## 1.Adım:
+**1.Adım:**
 
 Program öncelikle sisteminizde ```mesa-utils``` paketinin kurulu olup olmadığını kontrol eder. Kurulu ise bir sonraki adıma geçer. Kurulu değilse ```sudo apt-get install -y mesa-utils``` komutu ile paketi kurar.
 
-## 2. Adım:
+**2. Adım:**
 
 ```lsb_release -a``` komutuna ait Dağıtım bilgilerini ekrana yazdırır.
 
-## 3. Adım:
+**3. Adım:**
 
 ```lspci -nnk | egrep "VGA|3D|Display" -A2``` komutuna ait PCI cihaz bilgilerini ekrana yazdırır.
 
-## 4. Adım:
+**4. Adım:**
 
 ```glxinfo | grep render``` komutunu çıktılarını ekrana yazdırır.
 
-## 5. Adım:
+**5. Adım:**
 
 ```xrandr``` komutunun çıktılarını ekrana yazdırır.
 
-## 6. Adım:
+**6. Adım:**
 
-```dpkg -l | egrep "nvidia|bumblebee|nvidia-prime|fglrx"``` komutunun çıktılarını ekrana yazdırır. 
+```dpkg -l | egrep "nvidia|bumblebee|nvidia-prime|fglrx"``` komutunun çıktılarını ekrana yazdırır.
 
-# Örnek Çıktı
+---
+
+**Örnek Çıktı**
 
 Aşağıda, ```./grafikbilgi.sh``` komutuna ait örnek bir çıktı görülmektedir.
 
@@ -67,15 +69,15 @@ PCI cihaz bilgileri.
 glxinfo bilgileri.
 -----------------------------------------
 direct rendering: Yes
-    GLX_MESA_multithread_makecurrent, GLX_MESA_query_renderer, 
-    GLX_MESA_multithread_makecurrent, GLX_MESA_query_renderer, 
+    GLX_MESA_multithread_makecurrent, GLX_MESA_query_renderer,
+    GLX_MESA_multithread_makecurrent, GLX_MESA_query_renderer,
 Extended renderer info (GLX_MESA_query_renderer):
-OpenGL renderer string: Mesa DRI Intel(R) Haswell Mobile 
-    GL_ARB_conditional_render_inverted, GL_ARB_conservative_depth, 
-    GL_NV_conditional_render, GL_NV_depth_clamp, GL_NV_packed_depth_stencil, 
-    GL_ARB_compute_shader, GL_ARB_conditional_render_inverted, 
-    GL_NV_blend_square, GL_NV_conditional_render, GL_NV_depth_clamp, 
-    GL_OES_fbo_render_mipmap, GL_OES_get_program_binary, GL_OES_mapbuffer, 
+OpenGL renderer string: Mesa DRI Intel(R) Haswell Mobile
+    GL_ARB_conditional_render_inverted, GL_ARB_conservative_depth,
+    GL_NV_conditional_render, GL_NV_depth_clamp, GL_NV_packed_depth_stencil,
+    GL_ARB_compute_shader, GL_ARB_conditional_render_inverted,
+    GL_NV_blend_square, GL_NV_conditional_render, GL_NV_depth_clamp,
+    GL_OES_fbo_render_mipmap, GL_OES_get_program_binary, GL_OES_mapbuffer,
 ----------------------------------------
 xrandr bilgileri.
 ----------------------------------------
