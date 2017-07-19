@@ -1,16 +1,16 @@
 # Ubuntulamp
-Install LAMP on ubuntu
+LAMP (Apache MySQL PHP)'I Otomatik kurmak için oluşturulan bir script
 ## How To Install?
- Firstly we need to download file to our local PC
+Öncellikle Dosyayı Lokal Bilgisayarımıza İndiriyoruz
 ```shell
 $ git clone https://github.com/BTaskaya/Ubuntulamp
 ```
- Next we need the give permissions to installer
+Gerekli izinleri yükleyicimize veriyoruz.
 ```shell
 $ cd Ubuntulamp/ & chmod +x install-lamp.sh
 ```
- Finally start the program.
+Son olarak programı başlatıyoruz
 ```shell
 $ ./install-lamp.sh
 ```
-If program want the your password you must the enter your password because it need to restart apache and sql services
+Eğer program çalışırken sizden şifreniz sorulursa (2 Kez) girmeniz gerekmeltedir. Bu işlemin nedeni apache ve mysql servislerini tekrar başlatıyor.
