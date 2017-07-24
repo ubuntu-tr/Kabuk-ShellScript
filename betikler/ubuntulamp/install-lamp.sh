@@ -1,4 +1,9 @@
 #!/bin/bash
+#----------------------------------------------------
+# Özet: Ubuntu için Lamp Yükleyicisi
+# Yazar: @BTaskaya
+# Kaynak: https://github.com/BTaskaya
+#----------------------------------------------------
 
 echo "Chrome Installer by $(tput bold)$(tput setaf 2)@BTaskaya$(tput sgr0)"
 echo ""
