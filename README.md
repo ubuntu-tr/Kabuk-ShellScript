@@ -39,5 +39,6 @@ Her script ayrı bir klasörde bulunacak şekilde düzenlenecektir. Klasör içe
 | [grafikbilgi](https://github.com/ubuntu-tr/Kabuk-ShellScript/tree/master/betikler/ekrankart) | Ekran kartı problemi olan Ubuntu kullanıcılarının donanım bilgisini özetlemek için yazılmıştır. |
 | [if-then-else](https://github.com/ubuntu-tr/Kabuk-ShellScript/tree/master/betikler/ifthenelse) | Bash Programlamada if-then-else yapısının kullanım mantığını açıklamak için yazılmıştır. |
 | [ubuntu-lamp](https://github.com/ubuntu-tr/Kabuk-ShellScript/tree/master/betikler/ubuntulamp) | Ubuntu üzerinden otomatik bir şekilde lamp kurulmasını sağlayan scripttir.|
+| [autoping](https://github.com/ubuntu-tr/Kabuk-ShellScript/tree/master/betikler/autoping) | Bu betik, /home klasörüne oluşturacağınız iplist isimli dosyada bulunan iplere sırayla ping sinyalleri göndererek ip adreslerinin açık olup olmadığını kontrol eder.|
 
 _* Liste güncellenecektir._
