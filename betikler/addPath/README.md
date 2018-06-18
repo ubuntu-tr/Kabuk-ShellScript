@@ -11,8 +11,8 @@ Beklenmedik sonuç doğurabileceği için başka bir klasör içerisinden çalı
 
 ## Nasıl Çalışır?
 
-1. Betik öncelikle betikler klasörü içerisindeki tüm altklasörleri bulur ve bunları PATH değişkenine ekleyen bash komutunu $source_file dosyası içerisine yazar.
-2. Tüm klasörler eklendiğinde, $source_file dosyasının etkinleştirilmesi için, bu dosyayı .bashrc içerisine ekler.
+1. Betik öncelikle betikler klasörü içerisindeki tüm altklasörleri bulur ve bunları betikler/addPath/links klasörü içerisine sembolik linklerle bağlar.
+2. Tüm klasörler linklendiğinde, linklerin bulunduğu klasörü ~/.bashrc içerisine ekler.
 3. Tüm klasörlerin altındaki her bir *.sh dosyası için çalıştırma izni verir.
 
 

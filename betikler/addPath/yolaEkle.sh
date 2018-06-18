@@ -12,42 +12,39 @@
 cd ..
 
 # Global Vars
-source_file="addPath/eklenecekPaths.txt"
 betik_fol_loc=$(pwd)
 
-echo $betik_fol_loc/addPath
 if [ ! -f $betik_fol_loc/addPath/yolaEkle.sh ]; then
     echo "Bu betik, kendi klasörü içerisinden çağırıldığı varsayılarak yazıldı. Lütfen kendi klasörü içerisinden başlatın ve tekrar deneyin..."
     exit 1
 fi
 
 # Remove old files
-rm -f $source_file &> /dev/null
+rm -rf $betik_fol_loc/addPath/links
 
+# Create new files
+mkdir addPath/links &> /dev/null
 
-# Load directories into source file
-# Read "ls" output and add to the source_file
+# Read "ls" output and create new links into directory links
 listed_files=$(ls)
 
-echo "Yol dosyası oluşuturuluyor..."
-echo "# yolaEkle.sh tarafından oluşturuldu" >> $source_file
+echo "Yeni linkler oluşturuluyor..."
 (IFS='
 '
-for file in $listed_files
+for folder in $listed_files
 do 
-    echo "PATH=\$PATH:$betik_fol_loc/$file" >> $source_file; 
+    ln -s $betik_fol_loc/$folder/*.sh $betik_fol_loc/addPath/links/
 done
 )
 
-
-echo ".bashrc güncelleniyor"
-if grep -Fxq "source $source_file" ~/.bashrc
+echo "~/.bashrc güncelleniyor..."
+if grep -Fxq "PATH=\$PATH:$betik_fol_loc/addPath/links" ~/.bashrc
 then
     # No need to add again
-    echo ".bashrc zaten güncel"
+    echo "~/.bashrc zaten güncel!"
 else
     echo "# yolaEkle.sh tarafından ekleniyor" >> ~/.bashrc
-    echo "source $betik_fol_loc/$source_file" >> ~/.bashrc
+    echo "PATH=\$PATH:$betik_fol_loc/addPath/links" >> ~/.bashrc
 fi
 
 
