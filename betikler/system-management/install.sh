@@ -27,7 +27,7 @@
 #*system-management* dizini içerisinde tek tek scripler bulunacaktır. UNIX felsefesine uygun olduğunu düşündüğüm üslupta, sadelik ve tek iş yap tek işi iyi yap anlayışı içerisinde aşağıdaki betikler bu dizinde yer alacaktır. 
 #------------------------------------------------------------------------------------------------------------------------------------------
 
-sudo chmod +x ubuntu-sys-network.sh
+chmod +x ubuntu-sys-network.sh
 bash ubuntu-sys-network.sh
-sudo chmod +x ubuntu-sys-up-and-running.sh
+chmod +x ubuntu-sys-up-and-running.sh
 bash ubuntu-sys-up-and-running.sh

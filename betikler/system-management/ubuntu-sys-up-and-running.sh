@@ -32,11 +32,11 @@ ubuntu="Ubuntu"
 if echo "$id" | grep -q "$ubuntu";
 then
     echo "Ubuntu";
-    sudo apt-get update -y
-    sudo apt-get upgrade -y
-    sudo apt-get dist-upgrade -y
-    sudo apt-get auto-remove -y
-    sudo apt-get clean
+    apt-get update -y
+    apt-get upgrade -y
+    apt-get dist-upgrade -y
+    apt-get auto-remove -y
+    apt-get clean
 else
     echo "Other UNIX system or Windows Subsystem for Linux";
     echo $(uname -a)
